@@ -1,0 +1,188 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{blindtext}
+\usepackage{listings} % needed for the inclusion of source code
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+%Used to display java code
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  language=Java,                  % the language of the code
+  basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  stepnumber=0,                   % the step between two line-numbers. If it's 1, each line 
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=,                         % single adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=4,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  caption=\lstname,
+  %title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{blue},          % keyword style
+  commentstyle=\color{dkgreen},       % comment style
+  stringstyle=\color{mauve},         % string literal style
+  escapeinside={\%*}{*)},            % if you want to add a comment within your code
+  morekeywords={*,...}               % if you want to add more keywords to the set
+}
+%End of defs for java syntax highlighting
+
+\begin{document}
+
+% Title Area
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Object Orientated Approach to Machine Learning}
+
+\author{Merl~Creps Jr,~\IEEEmembership{Member,~IEEE}}% The paper headers
+
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+
+\maketitle
+
+
+\begin{abstract}
+%\boldmath
+This paper presents a case study for supervised machine learning using object-oriented programming principals. For this purpose objects are used to represent various complex data structures within the machine learning algorithm. 
+\end{abstract}
+
+
+\begin{IEEEkeywords}
+Artificial Intelligence, Artificial neural networks, Cognitive Complexity, Design Principals, Design Methodology, Machine Learning, Object oriented programming, Software Engineering, Supervised Learning
+\end{IEEEkeywords}
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+\section{Introduction}
+Object orientated programming is an paradigm that combines data and instruction sets for processing that data into objects that are used within the application. Object oriented programming provides crucial concepts that assist with modelling complicated real world systems into reusable, manageable, and maintainable software solutions.  Object oriented programming provides a more seamless transition between the different phases of the software life-cycle.
+
+\subsection{Abbreviations and Acronyms}
+Object orientated programming OOP, Unified Modeling Language UML
+
+%Object-oreintated programming introduction
+\section{Object Orientated Programming}
+Object-Oriented Programming or OOP refers to a programming paradigm based on objects, classes, polymorphism, inheritance and abstraction.  These objects are organized into classes, which allow individual objects to be group together. Modern programming languages such as Java, C/C++, Objective-C Ruby, Grails, and PHP, are object-oriented languages. 
+
+
+Object-oriented programming simplifies and organize software applications to allow software engineers to focus on the specific application context. Individual objects can be modified without affecting other aspects of the application. As software applications have increased in size and complexity, OOP has improve the development cycles for large, complex application more manageable.
+
+
+%define the key concepts of OOP
+\subsection{Objects}
+Objects are the self-contained, fundamental building blocks in object-oriented programming with a great emphasis placed on the applications design and functionality.  An object contains all the necessary attributes and methods that make the objects useful when designing solutions to complex problems.  An objects attributes are all the pertinent information that describe the functionality of the object.  
+
+
+\subsection{Classes}
+Classes are a fundamental part of object-orientated programming and are used to describe one or multiple objects.  Classes provided concrete implementation for instantiating, specific objects within the application.  An object is derived from a single class, but can instantiate multiple objects during the application.  While classes are at the core of object orientated programming, classes must be instantiated as objects in order to be used by any application. 
+
+Classes allow for a layer of encapsulation, which isolates variables and methods for specific instantiated objects.  This encapsulation, protects each class from modifications from other classes or by the software engineer in other area of the application.  By using classes software engineers can create well organized code which can easily be maintained. 
+
+%display sample class
+\lstinputlisting[language=Java]{SourceCode/NeuralNetException.java}
+
+\subsection{Inheritance}
+Inheritance is specific to object-oriented programming, and is a concept by which an object acquires all the attributes and methods of the base or parent object.  An inherited class is referred to as a subclass of its parent or super class. The subclass does not need to have a formal definition of it's attributes or methods are they are inherited from the parent class.  Inheritance is a mechanism which promote code reuse and to allow the code to be extended through the original software using public classes, abstract classes, and interfaces. 
+
+\newpage
+\lstinputlisting[language=Java]{SourceCode/inheritance_example.java}
+
+
+\subsection{Polymorphism}
+Polymorphism is a concept in object-orientated programming where the software engineer can assigned different meanings or usages based upon the context or meaning.  Polymorphism provides the mechanics to have variables, function or objects to have more than one form.  Polymorphism takes several forms; variables, functions, and machine leaning.
+
+\begin{itemize}
+\item Variables may take on the form of an integer in one context but transform into a string in another context.  Take userId, this may be an integer or string depending on the context.
+
+\item Function or methods can have the same name but have a different set of formal parameters and may even return a different data type based upon the context.
+
+\item Machine learning language, a data type of "any," such that when specified for a list, a list containing any data types can be processed by a function. If a function simply determines the length of a list, it doesn't matter what data types are in the list
+\end{itemize}
+
+
+\lstinputlisting[language=Java]{SourceCode/polymorphism_example.java}
+
+\subsection{Abstraction}
+Abstraction is one of the fundamental concepts of object-oriented programming focusing on what, not how.  Abstraction allows complex extraneous details to be suppressed by creating a level of complexity that the software engineer will interact with the system.  Abstraction lets the software engineer focus on the application, not the ancillary details that can be abstracted or generalized into reusable components.
+
+
+
+%Specifics about My Implementation
+\section{Machine Learning with Multilayer Perceptron}
+My Definition of ML with MLP
+
+\subsection{Neuron}
+
+\subsection{Network}
+
+\subsection{Classifier}
+
+\subsection{Gradient Decent}
+
+
+%Here is the conclusion
+\section{Conclusion}
+\blindtext
+
+
+\section{APPENDIX}
+
+Appendixes should appear before the acknowledgment.
+
+\section{ACKNOWLEDGMENT}
+
+Put sponsor acknowledgments in the unnumbered footnote on the first page.
+
+
+%References
+\begin{thebibliography}{99}
+
+\bibitem{c1} G. O. Young, ÒSynthetic structure of industrial plastics (Book style with paper title and editor),Ó 	in Plastics, 2nd ed. vol. 3, J. Peters, Ed.  New York: McGraw-Hill, 1964, pp. 15Ð64.
+\bibitem{c2} W.-K. Chen, Linear Networks and Systems (Book style).	Belmont, CA: Wadsworth, 1993, pp. 123Ð135.
+\bibitem{c3} H. Poor, An Introduction to Signal Detection and Estimation.   New York: Springer-Verlag, 1985, ch. 4.
+\bibitem{c4} B. Smith, ÒAn approach to graphs of linear forms (Unpublished work style),Ó unpublished.
+\bibitem{c5} E. H. Miller, ÒA note on reflector arrays (Periodical styleÑAccepted for publication),Ó IEEE Trans. Antennas Propagat., to be publised.
+\bibitem{c6} J. Wang, ÒFundamentals of erbium-doped fiber amplifiers arrays (Periodical styleÑSubmitted for publication),Ó IEEE J. Quantum Electron., submitted for publication.
+\bibitem{c7} C. J. Kaufman, Rocky Mountain Research Lab., Boulder, CO, private communication, May 1995.
+\bibitem{c8} J. U. Duncombe, ÒInfrared navigationÑPart I: An assessment of feasibility (Periodical style),Ó IEEE Trans. Electron Devices, vol. ED-11, pp. 34Ð39, Jan. 1959.
+\bibitem{c9} S. Chen, B. Mulgrew, and P. M. Grant, ÒA clustering technique for digital communications channel equalization using radial basis function networks,Ó IEEE Trans. Neural Networks, vol. 4, pp. 570Ð578, July 1993.
+\bibitem{c10} R. W. Lucky, ÒAutomatic equalization for digital communication,Ó Bell Syst. Tech. J., vol. 44, no. 4, pp. 547Ð588, Apr. 1965.
+\bibitem{c11} S. P. Bingulac, ÒOn the compatibility of adaptive controllers (Published Conference Proceedings style),Ó in Proc. 4th Annu. Allerton Conf. Circuits and Systems Theory, New York, 1994, pp. 8Ð16.
+\bibitem{c12} G. R. Faulhaber, ÒDesign of service systems with priority reservation,Ó in Conf. Rec. 1995 IEEE Int. Conf. Communications, pp. 3Ð8.
+\bibitem{c13} W. D. Doyle, ÒMagnetization reversal in films with biaxial anisotropy,Ó in 1987 Proc. INTERMAG Conf., pp. 2.2-1Ð2.2-6.
+\bibitem{c14} G. W. Juette and L. E. Zeffanella, ÒRadio noise currents n short sections on bundle conductors (Presented Conference Paper style),Ó presented at the IEEE Summer power Meeting, Dallas, TX, June 22Ð27, 1990, Paper 90 SM 690-0 PWRS.
+\bibitem{c15} J. G. Kreifeldt, ÒAn analysis of surface-detected EMG as an amplitude-modulated noise,Ó presented at the 1989 Int. Conf. Medicine and Biological Engineering, Chicago, IL.
+\bibitem{c16} J. Williams, ÒNarrow-band analyzer (Thesis or Dissertation style),Ó Ph.D. dissertation, Dept. Elect. Eng., Harvard Univ., Cambridge, MA, 1993. 
+\bibitem{c17} N. Kawasaki, ÒParametric study of thermal and chemical nonequilibrium nozzle flow,Ó M.S. thesis, Dept. Electron. Eng., Osaka Univ., Osaka, Japan, 1993.
+\bibitem{c18} J. P. Wilkinson, ÒNonlinear resonant circuit devices (Patent style),Ó U.S. Patent 3 624 12, July 16, 1990. 
+
+
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}
